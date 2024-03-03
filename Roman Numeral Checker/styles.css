@@ -1,0 +1,127 @@
+:root {
+    --body-bg-color: #1a1e21;
+    --el-bg-color: #2f343f;
+    --border-color: #f67e7d;
+    --el-shadow-color: #666a73;
+
+    --text-color: #76777a;
+    --common-gap: 4vh;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 300ms;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+
+    text-align: center;
+    font-family: Roboto Mono;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--common-gap);
+}
+
+/* HEADER */
+
+header {
+    margin-top: var(--common-gap);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--common-gap);
+}
+
+#logo {
+    height: 25px;
+}
+
+/* BODY */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--common-gap)
+}
+
+/* NUMBERS CONVERTER */
+
+fieldset {
+    width: 80vw;
+    max-width: 400px;
+    min-width: 200px;
+
+    padding: 20px;
+
+    background: var(--el-bg-color);
+    box-shadow: 10px 5px var(--el-shadow-color);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+#number {
+    height: 50px;
+    /* A maximum height has to be set, otherwise it grows larger than the fieldset. */
+    max-width: 80%;
+
+    text-align: center;
+    font-size: 2rem;
+
+    color: white;
+    background: var(--el-shadow-color);
+}
+
+#convert-btn {
+    width: 14%;
+    cursor: pointer;
+    
+    background-color: var(--el-shadow-color);
+}
+
+#output {
+    min-height: 100px;
+    max-width: 600px;
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+}
+
+/* COSMETICS */
+footer {
+    background-color: black;
+    flex-grow: 1;
+}
+
+
+fieldset, input, button,
+input:focus {
+    border: none;
+    outline: none;
+}
+
+#convert-btn:hover,
+#number:hover {
+    border: 1px solid var(--border-color)
+}
+
+/* removes arrows from number type inputs in: */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }

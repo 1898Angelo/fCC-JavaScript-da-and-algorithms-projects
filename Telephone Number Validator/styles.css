@@ -1,0 +1,211 @@
+:root {
+    /* Placeholders */
+    --bg-color: black;
+    --text-color: white;
+    --screen-inputs-color: rgba(90, 90, 90, 90%);
+    --phone-shell-gradient: linear-gradient( to bottom, #d5d7e5, #eee, #d5d7e5);
+    --status-bar-opacity: rgba(230, 230, 230, 40%);
+    --common-gap: 3vh;
+    --screen-dim: rgba(60, 60, 60, 60%);
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    pointer-events: initial;
+}
+
+html {
+    pointer-events: none;
+}
+
+body {
+    font-family: Roboto Mono;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    pointer-events: initial;
+}
+/* HEADER */
+
+header {
+    margin: 5vh 0;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--common-gap)
+}
+
+#logo {
+    height: 25px;
+}
+/* PHONE STUFF */
+
+main {
+    display: flex;
+    justify-content: center;
+    pointer-events:none;
+}
+
+#phone-outer-shell {
+    height: 600px;
+    width: 380px;
+    border: 20px solid gainsboro;
+    border-radius: 15%;
+    position: relative;
+}
+/* CAMERA */
+
+#phone-front-camera {
+    height: 18px;
+    width: 90px;
+    background-color: black;
+    border-radius: 30%;
+
+    position: absolute;
+    left: 35%;
+    top: -3.4%;
+}
+
+#camera-detector,
+#camera-lens {
+    background-color: var(--screen-dim);
+}
+
+#camera-detector {
+    width: 35px;
+    height: 15px;
+    border-radius: 30%;
+
+    position: absolute;
+    left: 15%;
+    top: 14%;
+}
+
+#camera-lens {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    
+    position: absolute;
+    top: 28%;
+    right: 18%
+}
+/* SCREEN */
+
+#phone-outer-screen {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    border: 20px solid black;
+    border-radius: 12%;
+    background: var(--screen-dim);
+
+    animation: flickering .2s infinite;
+    position: relative;   
+}
+
+/* STATUS BAR */
+
+#status-bar {
+    width: 100%;
+    height: 5%;
+    margin-top: -1%;
+    background-color: var(--status-bar-opacity);
+
+    position: relative;
+    z-index: -999;
+}
+
+#status-bar-clock {
+    width: inherit;
+    text-align: center;
+
+    position: absolute;
+    z-index: -998;
+    left: -2%;
+    top: 0.3%;
+}
+
+#phone-display {
+    width: 100%;
+    padding-top: 10%;
+
+    position: relative;
+    z-index: -1;
+}
+
+#results-div {
+    padding: 5%;
+    min-height: 200%;
+   
+    overflow-wrap: anywhere;
+
+    position: absolute;
+    top: 150px;
+}
+/* INPUT AND BUTTONS */
+
+#inputs-container {
+    height: 80%;
+    width: 100%;
+    padding: 5%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#user-input {
+    width: 100%;
+    height: 15%;
+    border-radius: 2%;
+
+    background: var(--screen-dim);
+    animation: flickering .2s infinite;
+}
+
+#buttons-container {
+    padding-bottom: 15%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+/* COSMETICS */
+
+.btn {
+    background: none;
+    cursor: pointer;
+}
+
+#user-input,
+.btn {
+    border: none;
+    outline: none;
+    color: var(--screen-inputs-color);
+}
+
+#phone-display,
+#results-div,
+#user-input,
+.btn {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+::-moz-selection,
+::selection { /* Code for Firefox */
+    background: none;
+  }
+
+/* KEYFRAMES */
+
+@keyframes flickering {
+    /* Make the color change for the text as well */
+    0% {background: rgba(60, 60, 60, 70%);}
+    30% {background: rgba(50, 50, 50, 70%);}
+    60% {background: rgba(40, 40, 40, 80%);}
+    99% {background: rgba(50, 50, 50, 70%);}
+}

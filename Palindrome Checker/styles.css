@@ -1,0 +1,115 @@
+:root {
+    --body-bg-color: #173f4f;
+    --card-bg-color: rgb(4, 143, 67);
+    --el-inner-color: #72937d;
+    --el-outer-color: #1c2122;
+    --el-hover-color: #173f4f;
+    --text-color: #e0e0e0;
+    --common-gap: 4vh;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-bg-color);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    font-family: Roboto Mono;
+    font-weight: lighter;
+    color: var(--text-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--common-gap)
+}
+
+/* HEADER */
+
+#header {
+    margin-top: 6vh;
+    text-align: center;
+}
+
+#logo {
+    height: 25px;
+}
+
+/* BODY */
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--common-gap);
+}
+
+#main > #palindrome-container {
+    background: var(--card-bg-color);
+    box-shadow: 10px 10px black;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+    margin-left: calc(-20vw - 20px);
+    padding: 20px 3%;
+    height: 300px;
+    width: 40vw;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+fieldset {
+    background: var(--body-bg-color);
+    box-shadow: 10px 5px var(--el-outer-color);
+
+    padding: 4%;
+    height: 25%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#text-input {
+    background: var(--el-inner-color);
+    width: 60%;
+    flex-grow: 0.7;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#submit-btn {
+    background: var(--el-inner-color);
+    width: 6%;
+    flex-grow: 0.2;
+
+    cursor: pointer;
+    transition: 300ms;
+}
+
+/* COSMETICS */
+
+#submit-btn:hover {
+    background: var(--el-hover-color);
+}
+
+fieldset, input, button,
+input:focus {
+    border: none;
+    outline: none;
+}
+
+#text-input, .icon {
+    color: var(--text-color)
+}
+
+footer {
+    background: black;
+    flex-grow: 1;
+}

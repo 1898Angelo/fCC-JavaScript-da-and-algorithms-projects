@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>freeCodeCamp — Telephone Number Validator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    </head>
+    <body onload="startClock()">
+        <header>
+            <h1 id="title">Telephone Number Validator</h1>
+            <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo"/>
+        </header>
+        <main>
+            <div id="phone-outer-shell">
+                <div id="phone-front-camera">
+                    <div id="camera-lens"></div>
+                    <div id="camera-detector"></div>
+                </div>
+                <div id="phone-outer-screen">
+                    <div id="status-bar"></div>
+                        <p id="status-bar-clock">00:00</p>
+                    <div id="phone-display">
+                        <p id="text">US Phone Number</p>
+                        <!-- Text must be written directly into the div to be able to pass freeCodeCamp's conditions-->
+                        <div id="results-div">
+                        </div>
+                    </div>
+                    <div id="inputs-container">
+                        <input id="user-input" aria-label="input box for US numbers"/>
+                        <div id="buttons-container">
+                            <button id="check-btn" class="btn">Check</button>
+                            <button id="clear-btn" class="btn">Clear</buton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="./script.js"></script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>freeCodeCamp — Pokémon Search</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="./styles.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&VT323&display=swap"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    </head>
+    <body onload="randomPokemon()">
+        <header>
+            <h1>Pokémon Search</h1>
+            <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo"/>
+        </header>
+        <main>
+            <div id="card">
+                <form id="search-form">
+                    <label for="search-input" id="search-label">Enter Pokémon Name or ID</label>
+                    <input id="search-input" class="theme-color" required/>
+                    <button id="search-button" class="theme-color" type="submit">
+                        <i class="fa fa-search icon" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <div class="divisor"></div>
+                <div id="card-top">
+                    <div id="pokemon-info">
+                        <div class="pokemon-info-container">
+                            <p>Name: <span id="pokemon-name" class="theme-negative-text"></span></p> 
+                            <p>ID: <span id="pokemon-id" class="theme-positive-text"></span></p>
+                        </div>
+                        <div class=pokemon-info-container>
+                            <p>Weight: <span id="weight" class="theme-negative-text"></span></p>
+                            <p>Height: <span id="height" class="theme-positive-text"></span></p>
+                        </div>
+                    </div>
+                    <div id="sprite-container" class="theme-color">
+                        <img id="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"/>
+                    </div>
+                    <div id="types">
+                        <p class="normal"></p>
+                        <p class="grass"></p>
+                    </div>
+                </div>
+                <div class="divisor"></div>
+                <div id="card-bottom">
+                    <div id="stats-container">
+                        <table>
+                            <tr>
+                                <th class="left-cell">Base</th>
+                                <th class="right-cell">Stat</th>
+                            </tr>
+                            <tr>
+                                <td class="left-cell theme-negative-text">HP</td>
+                                <td id="hp" class="right-cell theme-positive-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="left-cell theme-negative-text">ATTACK</td>
+                                <td id="attack" class="right-cell theme-positive-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="left-cell theme-negative-text">DEFENSE</td>
+                                <td id="defense" class="right-cell theme-positive-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="left-cell theme-negative-text">S. ATTACK</td>
+                                <td id="special-attack" class="right-cell theme-positive-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="left-cell theme-negative-text">S. DEFENSE</td>
+                                <td id="special-defense" class="right-cell theme-positive-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="left-cell theme-negative-text">SPEED</td>
+                                <td id="speed" class="right-cell theme-positive-text"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="./script.js"></script>
+</html>

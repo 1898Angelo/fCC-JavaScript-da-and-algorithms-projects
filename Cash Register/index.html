@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>freeCodeCamp — Cash Register</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="./styles.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&VT323&display=swap"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    </head>
+    <body onload="cashDrawer.randomPriceTotal();">
+        <header>
+            <h1>Cash Change Game</h1>
+            <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo"/>
+        </header>
+        <main>
+            <!-- Used by freeCodeCamp's tests -->
+            <fieldset style="display: none;">
+                <legend>Enter Amount of Cash</legend>
+                <input id="cash" aria-label="enter amount of cash"/>
+                <button id="purchase-btn">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                </button>  
+            </fieldset>
+
+            <div id="cash-register-container">
+                <div id="cash-register-screen-bezels">
+                    <div id="cash-register-display">
+                        <div id="change-due" class="hidden">
+                            <p id="message-to-log"></p>
+                        </div>
+                        <div id="numbers-lol">
+                            <div id="total-and-cash">
+                                <p class="cash" id="total">Price Total:<br/><span class="amount">$</span><span class="amount" id="price-total-span"></span></p>
+                                <p class="cash" id="change">Customer Cash:<br/><span class="amount">$</span><span class="amount" id="customer-cash-span"></span></p>
+                            </div>
+                            <div id="drawer-display">
+                                <p id="cid-text">Cash in Drawer:</p>
+                                <ul id="available-change">
+                                    <li>Pennies: $<span class="drawer-change" id="penny"></span></li>
+                                    <li>Nickels: $<span class="drawer-change" id="nickel"></span></li>
+                                    <li>Dimes: $<span class="drawer-change" id="dime"></span></li>
+                                    <li>Quarters: $<span class="drawer-change" id="quarter"></span></li>
+                                    <li>Ones: $<span class="drawer-change" id="one"></span></li>
+                                    <li>Fives: $<span class="drawer-change" id="five"></span></li>
+                                    <li>Tens: $<span class="drawer-change" id="ten"></span></li>
+                                    <li>Twenties: $<span class="drawer-change" id="twenty"></span></li>
+                                    <li>Hundreds: $<span class="drawer-change" id="one-hundred"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="keypad">
+                            <span class="key" onclick="enterKeypadInput(1)">1</span>
+                            <span class="key" onclick="enterKeypadInput(2)">2</span>
+                            <span class="key" onclick="enterKeypadInput(3)">3</span>
+                            <span class="key" onclick="enterKeypadInput(4)">4</span>
+                            <span class="key" onclick="enterKeypadInput(5)">5</span>
+                            <span class="key" onclick="enterKeypadInput(6)">6</span>
+                            <span class="key" onclick="enterKeypadInput(7)">7</span>
+                            <span class="key" onclick="enterKeypadInput(8)">8</span>
+                            <span class="key" onclick="enterKeypadInput(9)">9</span>
+                            <span class="key" onclick="enterKeypadInput(0)">0</span>
+                            <span class="key" onclick="enterKeypadInput('.')">.</span>
+                            <span class="key" onclick="enterKeypadInput('Restart')">Restart</span>
+                            <span class="key" onclick="enterKeypadInput('Enter')">Enter</span>
+                            <span class="key" onclick="enterKeypadInput('Delete')">Delete</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="cash-register-back"></div>
+                <div id="cash-register-case">
+                    <div class="line-break"></div>
+                    <div id="keylock">
+                        <div id="lock"></div>
+                    </div>
+                    <div class="line-break"></div>
+                </div>
+            </div>
+
+        </main>
+    </body>
+    <script src="./script.js"></script>
+</html>

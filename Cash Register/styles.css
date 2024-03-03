@@ -1,0 +1,313 @@
+/* MAKE THE CSS STYLESHEET MORE CONCISE LATER */
+
+:root {
+    /* Placeholders */
+    --bg-color: hsl(261, 18%, 36%);
+    --text-color: hsl(120, 33%, 91%);
+    --text-size: min(1.5rem, 1vw);
+    --key-size: min(1.8rem, 3.6vw);
+    --common-gap: 2vh;
+    --cash-register-body-color: hsl(236, 32%, 27%);
+    --metal-gradient-bg: linear-gradient( to right, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.8) 50%,
+    rgba(128,186,232,0) 99%,
+    rgba(128,186,232,0) 100%);
+    --blueish-gradient-bg: linear-gradient( to left,
+    rgba(50, 47, 92, 1) 0%,
+    rgb(50, 44, 77) 50%,
+    rgba(50, 47, 92, 1) 99%,
+    rgb(40, 43, 71) 100%);
+    --whiteish-gradient-bg: linear-gradient( to bottom,
+    rgb(179, 179, 179) 0%,
+    rgb(55, 49, 78) 20%,
+    rgb(127, 126, 134) 70%,
+    rgb(117, 117, 124) 99%,
+    rgb(233, 233, 233) 100%);
+    --dim-screen: rgba(10, 10, 10, 94%);
+    --screen-section-dim: rgba(40, 40, 40, 90%);
+    --keypad-color: rgb(51, 51, 82);
+    --message-box-bg: rgba(60, 60, 60, 80%);
+    --common-border-style: 1px dashed black;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+}
+
+header > * {
+    margin: var(--common-gap)
+}
+
+#logo {
+    height: 25px;
+}
+
+/* BODY STUFF */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--common-gap);
+}
+
+/* INPUT */
+
+fieldset {
+    padding: calc(var(--common-gap) + 10px);
+}
+
+fieldset > * {
+    padding: var(--common-gap);
+    font-size: var(--text-size);
+    text-align: center;  
+}
+
+/* CASH REGISTER BOX */
+
+#cash-register-container {  
+    height: 600px;
+    width: 100%;
+    min-width: 440px;
+    max-width: 900px;
+    padding: var(--common-gap) 0px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: relative;
+}
+
+/* CASH REGISTER DISPLAY */
+
+#cash-register-screen-bezels {
+    background: var(--blueish-gradient-bg);
+    padding: calc(var(--common-gap) + 10px);
+    height: 400px;
+    width: 80%;
+}
+
+#cash-register-display {
+    padding: var(--common-gap);
+    width: 100%;
+    height: 100%;
+    background-color: var(--dim-screen);
+    animation: flicker .2s infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+/* CONTAINER WITH MESSAGE TO BE DISPLAYED AFTER EACH EVENT */
+
+#change-due {
+    background: var(--message-box-bg);
+    border: var(--common-border-style);
+    padding: var(--common-gap);
+    overflow-wrap: anywhere;
+
+    width: 80%;
+    min-height: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 8%;
+    z-index: 2;
+}
+
+/* DRAWER DISPLAY - TOP SECTION */
+
+#numbers-lol {
+    width: 100%;
+    height: 44%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#total-and-cash {
+    width: 30%;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#drawer-display {
+    width: 70%;
+    max-width: 200px;
+    padding-left: var(--common-gap);
+}
+
+#cid-text {
+    text-align: end;
+}
+
+#available-change {
+    height: 100%;
+    overflow-y: auto;
+    list-style: inside;
+}
+
+/* KEYPAD */
+
+#keypad {
+    padding: var(--common-gap);
+    background: var(--keypad-color);
+    height: 48%;
+    max-width: 400px;
+    border-radius: 6%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: calc(var(--common-gap) - 10px);
+}
+
+.key {
+    max-height: 40px;
+    font-size: var(--key-size);
+    color: var(--text-color);
+    padding: 5px;
+    border-radius: 30%;
+    background: var(--whiteish-gradient-bg);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* CASH REGISTER CASE */
+
+#cash-register-case {
+    height: 140px;
+    width: 90%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#keylock {
+    height: 20px;
+    width: 20px;
+    background: var(--metal-gradient-bg);
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lock {
+    border: 1px solid black;
+    width: 90%;
+    transform: rotate(90deg);
+}
+
+.line-break {
+    padding: 1px;
+    background: var(--metal-gradient-bg);
+    border: 1px solid black;
+    border-radius: 33%;
+    width: 40%;
+}
+
+/* COSMETICS */
+
+#change-due.hidden {
+    display: none !important;
+}
+
+.amount {
+    font-size: 1.2rem;
+}
+
+#cash-register-case,
+#cash-register-back,
+#cash-register-screen-bezels {
+    background: var(--blueish-gradient-bg);
+    border: var(--common-border-style);
+    border-radius: 4%;
+}
+
+fieldset {
+    border: 1px solid;
+}
+
+input, 
+button {
+    outline: none;
+}
+
+input:hover,
+button:hover {
+    outline-style: dashed;
+    outline-width: 3px;
+    outline-color: darkgoldenrod;
+}
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+    .cash {
+        font-size: .8rem;
+    }
+    #keypad {
+        gap: 5px;
+    }
+}
+
+/* KEYFRAMES */
+@keyframes flicker {
+    0% {opacity: 1}
+    30% {opacity: .98}
+    50% {opacity: .96}
+    70% {opacity: .94}
+    90% {opacity: .93}
+    97% {opacity: .95}
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+#available-change::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.available-change {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
+
+#cash-register-back {
+    width: 85%;
+    height: 30px;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+}
+
+#cash-register-container,
+body {
+    font-family: "VT323", monospace
+}

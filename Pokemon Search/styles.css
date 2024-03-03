@@ -1,0 +1,254 @@
+:root {
+    --common-gap: 1rem;
+    --bg-color: #111216;
+    --card-bg-color: black;
+    --card-shadow-color: rgb(30, 30, 30);
+    /* PLACEHOLDERS */
+    --text-color: rgb(200, 200, 200);
+    --metal-gradient-bg: linear-gradient( to right, 
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.8) 50%,
+    rgba(128,186,232,0) 99%,
+    rgba(128,186,232,0) 100%);
+
+    --theme-el-bg-color: #16181d;
+    --theme-selection-color: #3c78ff;
+    --theme-text-color: #fcfdfd;
+    --theme-negative-color: #43cdbd;
+    --theme-positive-color: #9c53c6;
+
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--theme-text-color);
+    font-family: Roboto Mono;
+}
+
+/* COSMETICS */
+.icon {
+    font-size: 1rem
+}
+
+.theme-color {
+    background: var(--theme-el-bg-color);
+    color: var(--theme-text-color);
+    border: 2px solid var(--theme-selection-color);
+    font-size: 2rem;
+    outline: none;
+}
+
+.theme-negative-text {
+    color: var(--theme-negative-color)
+}
+
+.theme-positive-text {
+    color: var(--theme-positive-color)
+}
+
+.divisor {
+    border: 1px solid var(--theme-selection-color);
+    margin: var(--common-gap);
+}
+
+button:hover {
+    background: var(--theme-selection-color);
+}
+
+button {
+    cursor: pointer;
+}
+/*************/
+
+/* HEADER */
+header {
+    text-align: center;;
+}
+
+header > * {
+    margin: var(--common-gap) 0px;
+}
+
+#logo {
+    height: 25px;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#card {
+    width: 40%;
+    min-width: 350px;
+    max-width: 400px;
+    padding: calc(var(--common-gap ) * 2)var(--common-gap);
+    border-radius: 5%;
+    background: var(--card-bg-color);
+}
+
+/* FORM */
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--common-gap);
+}
+
+#search-form > * {
+    text-align: center;
+}
+
+#search-input {
+    width: 70%;
+}
+
+#search-button {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD TOP */
+#card-top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--common-gap)
+}
+
+.pokemon-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--common-gap);
+    font-size: 0.9rem;
+}
+
+
+#sprite-container {
+    text-align: center;
+    background-color: var(--theme-el-bg-color);
+}
+
+#sprite {
+    width: 30%;
+    min-height: 90px;
+}
+
+#types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--common-gap);
+    padding: 0 var(--common-gap)
+}
+
+/* CARD BOTTOM */
+table {
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+th {
+    margin-bottom: var(--common-gap);
+}
+
+.left-cell {
+    background-color: var(--theme-el-bg-color);
+    width: 50%;
+}
+
+.right-cell {
+    width: 40%;
+}
+
+
+/* POKEMON TYPE STYLING */
+.pokemon-type {
+    padding: 5px;
+    border-radius: 3%;
+}
+
+.normal {
+  background-color: #b7b7aa;
+}
+
+.fire {
+  background-color: #ff6f52;
+}
+
+.water {
+  background-color: #42a1ff;
+}
+
+.electric {
+  background-color: #fecc33;
+}
+
+.grass {
+  background-color: #78cc55;
+}
+
+.ice {
+  background-color: #66ccfe;
+}
+
+.fighting {
+  background-color: #d3887e;
+}
+
+.poison {
+  background-color: #c68bb7;
+}
+
+.ground {
+  background-color: #dfba52;
+}
+
+.flying {
+  background-color: #8899ff;
+}
+
+.psychic {
+  background-color: #ff66a3;
+}
+
+.bug {
+  background-color: #aabb23;
+}
+
+.rock {
+  background-color: #baaa66;
+}
+
+.ghost {
+  background-color: #9995d0;
+}
+
+.dragon {
+  background-color: #9e93f1;
+}
+
+.dark {
+  background-color: #b59682;
+}
+
+.steel {
+  background-color: #abaabb;
+}
+
+.fairy {
+  background-color: #ed99ed;
+}
