@@ -8,23 +8,23 @@ No code or styling was provided for the realization of any of the projects.
 
 ## Pokémon Search Project
 
-![pokemon-search](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/254dd783-3afd-47de-8b17-2e40431fb023)
+![pokemon-search](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/92aacc9d-e7f1-495d-a28c-61f7b19bcf88)
 
 _______________
 
 ## Cash Register Project
 
-![cash-change](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/fc3da6d4-24d8-4887-9fa8-b0f40a4a857d)
+![cash-change](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/0ce40d0a-ec34-4d3b-ae19-fde2d4ea5544)
 
 _______________
 
 ## US Phone number Validator Project
 
-![telephone-number-validator](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/635c3ecb-cc61-41b9-b48e-730c5c3e5ae0)
+![telephone-number-validator](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/61be0e87-a428-4592-914b-f74b21dd6a35)
 
 _______________
 
 
 ## Palindrome Word Checker Project
 
-![palindrome-checker](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/53e7f6b7-ec7f-4ec1-8490-cedb3049c2bd)
+![palindrome-checker](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/2bfa9c82-c10a-4b53-bca9-014b83a61c1b)
