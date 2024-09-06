@@ -28,3 +28,8 @@ _______________
 ## Palindrome Word Checker Project
 
 ![palindrome-checker](https://github.com/1898Angelo/fCC-JavaScript-da-and-algorithms-projects/assets/123282394/2bfa9c82-c10a-4b53-bca9-014b83a61c1b)
+
+_______________
+
+
+![Screenshot_20240906_191534](https://github.com/user-attachments/assets/cb4b2ede-a19a-4d9e-ad59-41e407564c24)
